@@ -13,7 +13,10 @@ const port = process.env.PORT || 8000;
 const app = express();
 
 // middleware
-app.use(cors());
+app.use( cors({
+    origin:"https://quick-list-one.vercel.app",
+    credentials: true,
+  }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
