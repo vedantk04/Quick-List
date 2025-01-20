@@ -14,7 +14,7 @@ const app = express();
 
 // middleware
 app.use( cors({
-    origin:"https://quick-list-one.vercel.app",
+    origin: process.env.CLIENT_URL,
     credentials: true,
   }));
 app.use(express.json());
